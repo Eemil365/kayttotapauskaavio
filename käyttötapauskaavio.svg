@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="960" height="620" fill="#ffffff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="20" font-weight="bold">Äänestyssovellus – käyttötapauskaavio</text>
+
+  <!-- System boundary -->
+  <rect x="330" y="60" width="440" height="520" rx="10" fill="none" stroke="#333" stroke-width="1.5"/>
+  <text x="550" y="88" text-anchor="middle" font-size="16" font-weight="bold">Äänestyssovellus</text>
+
+  <!-- Actor label: Käyttäjä -->
+  <text x="150" y="250" text-anchor="middle" font-size="15" font-weight="bold">Käyttäjä</text>
+
+  <!-- Actor label: Ylläpitäjä -->
+  <text x="150" y="500" text-anchor="middle" font-size="15" font-weight="bold">Ylläpitäjä</text>
+
+  <!-- Use cases -->
+  <g fill="#fffbe8" stroke="#000" stroke-width="1.5" font-size="14">
+    <!-- Selaa äänestystuloksia -->
+    <ellipse cx="470" cy="140" rx="110" ry="34"/>
+    <text x="470" y="145" text-anchor="middle" fill="#000" stroke="none">Selaa äänestystuloksia</text>
+    <!-- Valitsee äänestyksen -->
+    <ellipse cx="470" cy="250" rx="110" ry="34"/>
+    <text x="470" y="255" text-anchor="middle" fill="#000" stroke="none">Valitsee äänestyksen</text>
+    <!-- Äänestää -->
+    <ellipse cx="470" cy="365" rx="110" ry="34"/>
+    <text x="470" y="370" text-anchor="middle" fill="#000" stroke="none">Äänestää</text>
+    <!-- Luo uusi äänestys -->
+    <ellipse cx="470" cy="480" rx="110" ry="34"/>
+    <text x="470" y="485" text-anchor="middle" fill="#000" stroke="none">Luo uusi äänestys</text>
+    <!-- Poistaa äänestyksen -->
+    <ellipse cx="690" cy="480" rx="100" ry="34"/>
+    <text x="690" y="485" text-anchor="middle" fill="#000" stroke="none">Poistaa äänestyksen</text>
+  </g>
+
+  <!-- Associations -->
+  <g stroke="#000" stroke-width="1.5">
+    <line x1="195" y1="245" x2="360" y2="140"/>
+    <line x1="195" y1="250" x2="360" y2="250"/>
+    <line x1="195" y1="258" x2="360" y2="365"/>
+    <line x1="195" y1="495" x2="360" y2="480"/>
+    <line x1="195" y1="505" x2="590" y2="480"/>
+  </g>
+
+  <!-- include: Äänestää ..> Valitsee äänestyksen -->
+  <g stroke="#000" stroke-width="1.2" fill="none">
+    <path d="M470,331 L470,284" marker-end="url(#arr)"/>
+  </g>
+  <text x="480" y="315" font-size="12" font-style="italic" fill="#333">«include»</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 z" fill="#000"/>
+    </marker>
+  </defs>
+</svg>
